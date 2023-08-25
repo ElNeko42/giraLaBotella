@@ -7,6 +7,17 @@
 }
 
 #bottle {
-  width: 50%;
+  width: 30em;
   transition: transform 3s;
+}
+
+.challenge-slot {
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+
+  p {
+    transition: transform 0.2s; // Animación suave de tragaperras
+  }
 }
