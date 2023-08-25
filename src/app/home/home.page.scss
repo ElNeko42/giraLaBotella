@@ -1,31 +1,48 @@
+
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
-}
+  margin: 0;
+  padding: 0;
+  height: 100%;  /* Usa la altura total de la vista del dispositivo */
+  overflow: hidden; /* Evita el desplazamiento vertical */}
 
 #bottle {
-  width: 30em;
+  width: 50%;  /* Se ajustará al 50% del ancho del dispositivo. Puedes ajustar este valor según tus necesidades. */
+  max-width: 30em;  /* Máximo tamaño que puede alcanzar la botella */
   transition: transform 3s;
 }
 
 .challenge-slot {
   text-align: center;
   border-radius: 10px;
-  background: linear-gradient(135deg, #6DD5ED, #2193B0);  // Fondo con gradiente
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  // Sombra suave
-  padding: 15px;
-  margin-bottom: 20px;
-  position: relative;  // Esto es para el efecto de deslizamiento del reto
-  overflow: hidden;   // Esconde cualquier parte del texto que salga del contenedor
+  background: linear-gradient(135deg, #6DD5ED, #2193B0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
 
   p {
-    color: white;  // Texto en blanco para que contraste con el fondo
-    font-size: 1.2em;  // Tamaño de fuente más grande
-    font-weight: bold;  // Texto en negritas
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
     transition: transform 0.2s ease-in-out;
   }
-
 }
+.button-container {
+  position: absolute; /* Posiciona el botón de manera absoluta */
+  bottom: 1em;       /* Coloca el botón a 1em del borde inferior */
+  left: 50%;         /* Centra el botón horizontalmente */
+  transform: translateX(-50%); /* Ajusta el botón para que quede perfectamente centrado */
+}
+.inner-scroll {
+  height: 100vh;
+  overflow-y: auto;
+}
+ .scroll-y{
+  overflow: hidden;
+ }
+
+
