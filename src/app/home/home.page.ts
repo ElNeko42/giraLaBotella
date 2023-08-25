@@ -27,7 +27,8 @@ export class HomePage {
     'Castigo triple: Bebe tres chupito.',
     'Duelo de chupitos: Desafía a alguien a ver quién puede tomar un chupito más rápido.',
     'La estatua humana: Cuando te toque, conviértete en una "estatua" no te puedes mover ni hablar durante 1 minuto',
-    'Inventa regla: inventate una regla si alguien no la cumple tiene un castigo que decide el grupo'
+    'Inventa regla: inventate una regla si alguien no la cumple tiene un castigo que decide el grupo',
+    'Club de la comedia: Cuenta un chiste al grupo'
   ]; 
   lastChallenge: string = '';
 
@@ -41,7 +42,7 @@ export class HomePage {
 
       // Asegurarse de que el reto seleccionado no sea el mismo que el anterior
       while (randomChallenge === this.lastChallenge) {
-        randomChallenge = this.challenges[Math.floor(Math.random() * this.challenges.length)];
+        randomChallenge = this.challenges[Math.floor(Math.random() * this.challenges.length +1)];
       }
 
       this.lastChallenge = randomChallenge;
