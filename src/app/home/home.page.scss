@@ -13,11 +13,19 @@
 
 .challenge-slot {
   text-align: center;
-  border: 1px solid black;
-  padding: 10px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #6DD5ED, #2193B0);  // Fondo con gradiente
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  // Sombra suave
+  padding: 15px;
   margin-bottom: 20px;
+  position: relative;  // Esto es para el efecto de deslizamiento del reto
+  overflow: hidden;   // Esconde cualquier parte del texto que salga del contenedor
 
   p {
-    transition: transform 0.2s; // Animación suave de tragaperras
+    color: white;  // Texto en blanco para que contraste con el fondo
+    font-size: 1.2em;  // Tamaño de fuente más grande
+    font-weight: bold;  // Texto en negritas
+    transition: transform 0.2s ease-in-out;
   }
+
 }
