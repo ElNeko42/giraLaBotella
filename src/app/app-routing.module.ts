@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { MainMenuComponent } from './main-menu/main-menu.component';
 
 const routes: Routes = [
   {
@@ -7,11 +8,16 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
+    path: 'main-menu',
+    component: MainMenuComponent
+  },
+  {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'main-menu',
     pathMatch: 'full'
   },
 ];
+
 
 @NgModule({
   imports: [
